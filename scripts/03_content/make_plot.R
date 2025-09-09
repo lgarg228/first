@@ -10,7 +10,7 @@ data("data_heatwaves")
 p <- ggplot( data = data_heatwaves,
              mapping = aes(x = year, y = temp_mean,
                            group = paste(fishery, eu_rnpa))) +
-  geom_line() +
+  geom_line(linewidth = 1.2) +
   theme_bw()
 
 #export plot
