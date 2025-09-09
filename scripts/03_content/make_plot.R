@@ -14,6 +14,7 @@ p <- ggplot( data = data_heatwaves,
   facet_wrap(~ fishery, ncol = 2, scales = "free_y") +
   theme_bw()
 
+
 #export plot
 ggsave(plot = p, filename = "results/img/mean_temp_per_year.png")
 p
