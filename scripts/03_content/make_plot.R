@@ -10,8 +10,10 @@ data("data_heatwaves")
 p <- ggplot( data = data_heatwaves,
              mapping = aes(x = year, y = temp_mean,
                            group = paste(fishery, eu_rnpa))) +
-  geom_line(linewidth = 1.2) +
-  theme_bw()
+  geom_line(linewidth = .5) +
+  facet_wrap(~ fishery, ncol = 2, scales = "free_y")
+
+p
 
 #export plot
 ggsave(plot = p,
