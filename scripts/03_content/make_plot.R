@@ -10,11 +10,11 @@ data("data_heatwaves")
 p <- ggplot( data = data_heatwaves,
              mapping = aes(x = year, y = temp_mean,
                            group = paste(fishery, eu_rnpa))) +
-  geom_line(linewidth = .5) +
-  facet_wrap(~ fishery, ncol = 2, scales = "free_y")
+  geom_line(linewidth = .8) +
+  facet_wrap(~ fishery, ncol = 2, scales = "free_y") +
+  theme_bw()
 
-p
 
 #export plot
-ggsave(plot = p,
-       filename = "results/img/mean_temp_per_year.png")
+ggsave(plot = p, filename = "results/img/mean_temp_per_year.png")
+p
